@@ -8,12 +8,17 @@
 import Foundation
 
 protocol NetworkService {
-    func request<Request: DataRequest>(_ request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void)
+    func request<E: Endpoint>(
+        request: E,
+        completion: @escaping (Result<E.Response, Error>) -> Void
+    )
 }
 
 final class DefaultNetworkService: NetworkService {
-    
-    func request<Request: DataRequest>(_ request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void) {
+    func request<E: Endpoint>(
+        request: E,
+        completion: @escaping (Result<E.Response, Error>) -> Void
+    ) {
     
         guard var urlComponent = URLComponents(string: request.url) else {
             let error = NSError(

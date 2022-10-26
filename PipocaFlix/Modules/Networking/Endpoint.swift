@@ -1,5 +1,5 @@
 //
-//  DataRequest.swift
+//  Endpoint.swift
 //  PipocaFlix
 //
 //  Created by Ranieri Aguiar on 25/10/22.
@@ -15,7 +15,7 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-protocol DataRequest {
+protocol Endpoint {
     associatedtype Response
     
     var url: String { get }
@@ -26,14 +26,14 @@ protocol DataRequest {
     func decode(_ data: Data) throws -> Response
 }
 
-extension DataRequest where Response: Decodable {
+extension Endpoint where Response: Decodable {
     func decode(_ data: Data) throws -> Response {
         let decoder = JSONDecoder()
         return try decoder.decode(Response.self, from: data)
     }
 }
 
-extension DataRequest {
+extension Endpoint {
     var headers: [String : String] {
         [:]
     }

@@ -8,7 +8,7 @@
 protocol DiscoverMoviesUseCase {
     func getDiscoveredMovies(
         page: String,
-        completion: @escaping (Result<[Movie], Error>) -> Void
+        completion: @escaping (Result<MoviesResponse, Error>) -> Void
     )
 }
 
@@ -21,7 +21,7 @@ final class DiscoverMoviesUseCaseImpl: DiscoverMoviesUseCase {
     
     func getDiscoveredMovies(
         page: String,
-        completion: @escaping (Result<[Movie], Error>) -> Void
+        completion: @escaping (Result<MoviesResponse, Error>) -> Void
     ) {
         homeService.getDiscoveredMovies(page: page) { result in
             switch result {

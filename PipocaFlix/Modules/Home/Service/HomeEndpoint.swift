@@ -12,7 +12,7 @@ enum HomeEndpoint {
 }
 
 extension HomeEndpoint: Endpoint {
-    typealias Response = [Movie]
+    typealias Response = MoviesResponse
     
     var url: String {
         switch self {
@@ -41,7 +41,7 @@ extension HomeEndpoint: Endpoint {
         }
     }
     
-    func decode(_ data: Data) throws -> [Movie] {
+    func decode(_ data: Data) throws -> MoviesResponse {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let dateFormatter = DateFormatter()
@@ -49,6 +49,6 @@ extension HomeEndpoint: Endpoint {
         decoder.dateDecodingStrategy = .formatted(dateFormatter)
         
         let response = try decoder.decode(MoviesResponse.self, from: data)
-        return response.results
+        return response
     }
 }

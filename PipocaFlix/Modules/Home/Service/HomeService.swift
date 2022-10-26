@@ -8,7 +8,7 @@
 protocol HomeService {
     func getDiscoveredMovies(
         page: String,
-        completion: @escaping (Result<[Movie], Error>) -> Void
+        completion: @escaping (Result<MoviesResponse, Error>) -> Void
     )
 }
 
@@ -22,7 +22,7 @@ final class HomeServiceImpl: HomeService {
     
     func getDiscoveredMovies(
         page: String,
-        completion: @escaping (Result<[Movie], Error>) -> Void
+        completion: @escaping (Result<MoviesResponse, Error>) -> Void
     ) {
         networkService.request(
             request: HomeEndpoint.getDiscoveredMovies(page: page),

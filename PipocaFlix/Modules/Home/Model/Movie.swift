@@ -11,6 +11,12 @@ struct MoviesResponse: Decodable {
 }
 
 struct Movie: Decodable {
+    
+    init(posterPath: String = "", voteAverage: Float = 0.0) {
+        self.posterPath = posterPath
+        self.voteAverage = voteAverage
+    }
+    
     let posterPath: String
     let voteAverage: Float
 }

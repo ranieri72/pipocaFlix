@@ -19,5 +19,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>BaseURL</key>
+	<string>https://api.themoviedb.org/3</string>
+	<key>ApiKey</key>
+	<string>9c3708bebb618b057ff852cd4ee7ae0e</string>
+	<key>ImageBaseURL</key>
+	<string>https://image.tmdb.org/t/p/w342</string>
 </dict>
 </plist>

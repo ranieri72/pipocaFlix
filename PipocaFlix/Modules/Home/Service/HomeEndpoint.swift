@@ -17,7 +17,7 @@ extension HomeEndpoint: Endpoint {
     var url: String {
         switch self {
         case .getDiscoveredMovies:
-            let baseURL: String = "https://api.themoviedb.org/3"
+            let baseURL = Bundle.main.object(forInfoDictionaryKey: "BaseURL") as? String ?? ""
             let path: String = "/discover/movie"
             return baseURL + path
         }
@@ -26,7 +26,7 @@ extension HomeEndpoint: Endpoint {
     var queryItems: [String : String] {
         switch self {
         case .getDiscoveredMovies(let page):
-            let apiKey: String = "9c3708bebb618b057ff852cd4ee7ae0e"
+            let apiKey = Bundle.main.object(forInfoDictionaryKey: "ApiKey") as? String ?? ""
             return [
                 "api_key": apiKey,
                 "page": page
@@ -44,10 +44,6 @@ extension HomeEndpoint: Endpoint {
     func decode(_ data: Data) throws -> MoviesResponse {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd"
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
-        
         let response = try decoder.decode(MoviesResponse.self, from: data)
         return response
     }

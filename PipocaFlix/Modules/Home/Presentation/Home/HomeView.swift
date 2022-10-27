@@ -17,7 +17,7 @@ final class HomeView: UIView {
         let tableView = UITableView()
         tableView.register(MoviesTableCell.self, forCellReuseIdentifier: MoviesTableCell.cellIdentifier)
         tableView.separatorStyle = .none
-        tableView.rowHeight = 180
+        tableView.rowHeight = 170
         tableView.dataSource = moviesTableDataSource
         tableView.delegate = moviesTableDelegate
         return tableView

@@ -24,7 +24,6 @@ final class MoviesCollectionCell: UICollectionViewCell {
         super.init(frame: frame)
         buildViewHierarchy()
         addConstraints()
-        backgroundColor = .lightGray
     }
     
     required init?(coder: NSCoder) {
@@ -34,6 +33,12 @@ final class MoviesCollectionCell: UICollectionViewCell {
     // MARK: - Setup
     func setupData(with movie: Movie) {
         posterImage.download(path: movie.posterPath)
+        applyBorder(movie.isBelowAverage())
+    }
+    
+    private func applyBorder(_ isBelowAverage: Bool) {
+        layer.borderColor = isBelowAverage ? UIColor.red.cgColor : UIColor.clear.cgColor
+        layer.borderWidth = isBelowAverage ? 5 : 0
     }
 }
 

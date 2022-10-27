@@ -12,11 +12,15 @@ struct MoviesResponse: Decodable {
 
 struct Movie: Decodable {
     
+    let posterPath: String
+    let voteAverage: Float
+    
     init(posterPath: String = "", voteAverage: Float = 0.0) {
         self.posterPath = posterPath
         self.voteAverage = voteAverage
     }
     
-    let posterPath: String
-    let voteAverage: Float
+    func isBelowAverage() -> Bool {
+        return voteAverage < 6
+    }
 }

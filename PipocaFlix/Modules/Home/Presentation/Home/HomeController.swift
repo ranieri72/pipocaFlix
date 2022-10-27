@@ -9,7 +9,7 @@ import UIKit
 
 protocol HomeDisplayLogic: AnyObject {
     func showMovies(from movieSection: Int)
-    func displayAlert(with message: String)
+    func displayAlert(with title: String, message: String)
     func presentDetail(with movie: Movie)
 }
 
@@ -55,8 +55,10 @@ extension HomeController: HomeDisplayLogic {
         }
     }
     
-    func displayAlert(with message: String) {
-        print("displayAlert with \(message)")
+    func displayAlert(with title: String, message: String) {
+        let dialogMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        dialogMessage.addAction(UIAlertAction(title: "alertOk".localized(), style: .default))
+        present(dialogMessage, animated: true, completion: nil)
     }
     
     func presentDetail(with movie: Movie) {

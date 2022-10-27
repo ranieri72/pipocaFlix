@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  PipocaFlix
+
+  Created by Ranieri Aguiar on 27/10/22.
+  
+*/
+"alertTitle" = "Warning";
+"alertMessage" = "This content has a low rating";
+"alertOk" = "OK";
+
+"detailAverageVote" = "Average vote %@";

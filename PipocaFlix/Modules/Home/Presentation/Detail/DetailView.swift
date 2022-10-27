@@ -48,7 +48,7 @@ final class DetailView: UIView {
     // MARK: - Setup
     func setupData(with movie: Movie) {
         posterImage.download(path: movie.posterPath)
-        voteAverageLabel.text = "Average vote: \(movie.voteAverage)"
+        voteAverageLabel.text = String(format: "detailAverageVote".localized(), String(movie.voteAverage))
     }
 }
 

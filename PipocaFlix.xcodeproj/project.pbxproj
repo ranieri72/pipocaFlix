@@ -18,6 +18,8 @@
 		F4937E38290A12CE00E97AB9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E37290A12CE00E97AB9 /* DetailView.swift */; };
 		F4937E3A290A12D800E97AB9 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E39290A12D800E97AB9 /* DetailController.swift */; };
 		F4937E3D290A267D00E97AB9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E3C290A267D00E97AB9 /* HomeCoordinator.swift */; };
+		F4937E3F290A37AF00E97AB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4937E3E290A37AF00E97AB9 /* Localizable.strings */; };
+		F4937E41290A397500E97AB9 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E40290A397500E97AB9 /* String+Localized.swift */; };
 		F4C14F192908765C00DD912E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F182908765C00DD912E /* AppDelegate.swift */; };
 		F4C14F1B2908765C00DD912E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F1A2908765C00DD912E /* SceneDelegate.swift */; };
 		F4C14F222908765E00DD912E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C14F212908765E00DD912E /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		F4937E37290A12CE00E97AB9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F4937E39290A12D800E97AB9 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		F4937E3C290A267D00E97AB9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		F4937E3E290A37AF00E97AB9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F4937E40290A397500E97AB9 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		F4C14F152908765C00DD912E /* PipocaFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipocaFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C14F182908765C00DD912E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C14F1A2908765C00DD912E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F4937E322909EA1000E97AB9 /* UIImageView+Downloader.swift */,
+				F4937E40290A397500E97AB9 /* String+Localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				F4C14F5629088FBF00DD912E /* Model */,
 				F4C14F632908B13F00DD912E /* UseCase */,
 				F4C14F5029088D2C00DD912E /* Service */,
+				F4937E3E290A37AF00E97AB9 /* Localizable.strings */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C14F252908765E00DD912E /* LaunchScreen.storyboard in Resources */,
+				F4937E3F290A37AF00E97AB9 /* Localizable.strings in Resources */,
 				F4C14F222908765E00DD912E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +436,7 @@
 				F4937E2B290988B900E97AB9 /* MoviesTableCell.swift in Sources */,
 				F4C14F652908B17000DD912E /* DiscoverMoviesUseCase.swift in Sources */,
 				F4C14F5C2908A1D200DD912E /* HomeController.swift in Sources */,
+				F4937E41290A397500E97AB9 /* String+Localized.swift in Sources */,
 				F4937E3A290A12D800E97AB9 /* DetailController.swift in Sources */,
 				F4937E272909813C00E97AB9 /* MoviesTableDelegate.swift in Sources */,
 				F4937E2F2909DC5E00E97AB9 /* ImageDownloader.swift in Sources */,

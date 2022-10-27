@@ -33,7 +33,7 @@ final class HomeViewModelImpl {
             case .success(let response):
                 self.handleSuccessData(movies: response)
             case .failure(let error):
-                self.controller?.displayAlert(with: error.localizedDescription)
+                self.controller?.displayAlert(with: "alertTitle".localized(), message: error.localizedDescription)
             }
         }
     }
@@ -62,7 +62,9 @@ extension HomeViewModelImpl: HomeViewModel {
     }
     
     func openDetail(with movie: Movie) {
-        if !movie.isBelowAverage() {
+        if movie.isBelowAverage() {
+            controller?.displayAlert(with: "alertTitle".localized(), message: "alertMessage".localized())
+        } else {
             controller?.presentDetail(with: movie)
         }
     }

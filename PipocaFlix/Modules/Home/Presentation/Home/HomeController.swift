@@ -10,6 +10,7 @@ import UIKit
 protocol HomeDisplayLogic: AnyObject {
     func showMovies(from movieSection: Int)
     func displayAlert(with message: String)
+    func presentDetail(with movie: Movie)
 }
 
 final class HomeController: UIViewController {
@@ -17,6 +18,7 @@ final class HomeController: UIViewController {
     // MARK: - Properties
     private var viewModel: HomeViewModel?
     private let mainView = HomeView()
+    var delegate: HomeControllerDelegate?
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -55,5 +57,9 @@ extension HomeController: HomeDisplayLogic {
     
     func displayAlert(with message: String) {
         print("displayAlert with \(message)")
+    }
+    
+    func presentDetail(with movie: Movie) {
+        delegate?.openDetail(with: movie)
     }
 }

@@ -24,10 +24,11 @@ extension MoviesCollectionDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionCell.cellIdentifier, for: indexPath)
-        guard let moviesCollectionCell = collectionViewCell as? MoviesCollectionCell else {
+        guard let moviesCollectionCell = collectionViewCell as? MoviesCollectionCell,
+              let movie = movies?[indexPath.row] else {
             return UICollectionViewCell()
         }
-        let movie = movies?[indexPath.row] ?? Movie()
+        
         moviesCollectionCell.setupData(with: movie)
         return moviesCollectionCell
     }

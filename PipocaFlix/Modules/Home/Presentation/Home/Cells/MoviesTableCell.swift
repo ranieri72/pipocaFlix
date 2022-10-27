@@ -12,6 +12,7 @@ final class MoviesTableCell: UITableViewCell {
     static let cellIdentifier = "moviesTableCell"
     
     private let moviesCollectionDataSource = MoviesCollectionDataSource()
+    private let moviesCollectionDelegate = MoviesCollectionDelegate()
     
     // MARK: - UI Properties
     private lazy var moviesColletionView: UICollectionView = {
@@ -22,6 +23,7 @@ final class MoviesTableCell: UITableViewCell {
         let collectionView = UICollectionView(frame: contentView.frame, collectionViewLayout: layout)
         collectionView.register(MoviesCollectionCell.self, forCellWithReuseIdentifier: MoviesCollectionCell.cellIdentifier)
         collectionView.dataSource = moviesCollectionDataSource
+        collectionView.delegate = moviesCollectionDelegate
         return collectionView
     }()
     
@@ -37,8 +39,9 @@ final class MoviesTableCell: UITableViewCell {
     }
     
     // MARK: - Setup
-    func setupData(with movies: [Movie]) {
+    func setupData(with movies: [Movie], viewModel: HomeViewModel) {
         moviesCollectionDataSource.setup(movies: movies)
+        moviesCollectionDelegate.setup(with: movies, viewModel: viewModel)
         moviesColletionView.reloadData()
     }
 }

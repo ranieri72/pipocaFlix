@@ -28,11 +28,13 @@ extension MoviesTableDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: MoviesTableCell.cellIdentifier, for: indexPath)
-        guard let moviesTableCell = tableViewCell as? MoviesTableCell else {
+        guard let moviesTableCell = tableViewCell as? MoviesTableCell,
+              let movies = viewModel?.getMovies(from: indexPath.row + 1),
+              let viewModel = viewModel else {
             return UITableViewCell()
         }
-        let movies = viewModel?.getMovies(from: indexPath.row + 1) ?? [Movie]()
-        moviesTableCell.setupData(with: movies)
+        
+        moviesTableCell.setupData(with: movies, viewModel: viewModel)
         return moviesTableCell
     }
 }

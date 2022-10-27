@@ -6,9 +6,11 @@
 //
 
 protocol HomeViewModel {
+    var controller: HomeDisplayLogic? { get set }
     func getMovies(from section: Int) -> [Movie]
     func numberOfMovieSections() -> Int
     func discoverMovies(from section: Int)
+    func openDetail(with movie: Movie)
 }
 
 final class HomeViewModelImpl {
@@ -56,6 +58,12 @@ extension HomeViewModelImpl: HomeViewModel {
     func discoverMovies(from section: Int) {
         if moviesSections[section] == nil {
             fetchMovies(from: section)
+        }
+    }
+    
+    func openDetail(with movie: Movie) {
+        if !movie.isBelowAverage() {
+            controller?.presentDetail(with: movie)
         }
     }
 }

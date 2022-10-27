@@ -15,6 +15,9 @@
 		F4937E2D290988E400E97AB9 /* MoviesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E2C290988E400E97AB9 /* MoviesCollectionCell.swift */; };
 		F4937E2F2909DC5E00E97AB9 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E2E2909DC5E00E97AB9 /* ImageDownloader.swift */; };
 		F4937E332909EA1000E97AB9 /* UIImageView+Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E322909EA1000E97AB9 /* UIImageView+Downloader.swift */; };
+		F4937E38290A12CE00E97AB9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E37290A12CE00E97AB9 /* DetailView.swift */; };
+		F4937E3A290A12D800E97AB9 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E39290A12D800E97AB9 /* DetailController.swift */; };
+		F4937E3D290A267D00E97AB9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E3C290A267D00E97AB9 /* HomeCoordinator.swift */; };
 		F4C14F192908765C00DD912E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F182908765C00DD912E /* AppDelegate.swift */; };
 		F4C14F1B2908765C00DD912E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F1A2908765C00DD912E /* SceneDelegate.swift */; };
 		F4C14F222908765E00DD912E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C14F212908765E00DD912E /* Assets.xcassets */; };
@@ -30,7 +33,7 @@
 		F4C14F602908A1EC00DD912E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F5F2908A1EC00DD912E /* HomeViewModel.swift */; };
 		F4C14F622908A89500DD912E /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F612908A89500DD912E /* HomeService.swift */; };
 		F4C14F652908B17000DD912E /* DiscoverMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F642908B17000DD912E /* DiscoverMoviesUseCase.swift */; };
-		F4C14F672908C16600DD912E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F662908C16600DD912E /* DIContainer.swift */; };
+		F4C14F672908C16600DD912E /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F662908C16600DD912E /* HomeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		F4937E2C290988E400E97AB9 /* MoviesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionCell.swift; sourceTree = "<group>"; };
 		F4937E2E2909DC5E00E97AB9 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		F4937E322909EA1000E97AB9 /* UIImageView+Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Downloader.swift"; sourceTree = "<group>"; };
+		F4937E37290A12CE00E97AB9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F4937E39290A12D800E97AB9 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		F4937E3C290A267D00E97AB9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		F4C14F152908765C00DD912E /* PipocaFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipocaFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C14F182908765C00DD912E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C14F1A2908765C00DD912E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +84,7 @@
 		F4C14F5F2908A1EC00DD912E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F4C14F612908A89500DD912E /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		F4C14F642908B17000DD912E /* DiscoverMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoviesUseCase.swift; sourceTree = "<group>"; };
-		F4C14F662908C16600DD912E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		F4C14F662908C16600DD912E /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,15 @@
 				F4937E322909EA1000E97AB9 /* UIImageView+Downloader.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F4937E36290A12B900E97AB9 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F4937E37290A12CE00E97AB9 /* DetailView.swift */,
+				F4937E39290A12D800E97AB9 /* DetailController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		F4C14F0C2908765C00DD912E = {
@@ -205,7 +220,8 @@
 		F4C14F4E29088BC100DD912E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F4C14F662908C16600DD912E /* DIContainer.swift */,
+				F4C14F662908C16600DD912E /* HomeFactory.swift */,
+				F4937E3C290A267D00E97AB9 /* HomeCoordinator.swift */,
 				F4C14F592908A14700DD912E /* Presentation */,
 				F4C14F5629088FBF00DD912E /* Model */,
 				F4C14F632908B13F00DD912E /* UseCase */,
@@ -243,6 +259,7 @@
 		F4C14F592908A14700DD912E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F4937E36290A12B900E97AB9 /* Detail */,
 				F4C14F5A2908A1A700DD912E /* Home */,
 			);
 			path = Presentation;
@@ -403,13 +420,16 @@
 				F4C14F4B29088B0800DD912E /* Endpoint.swift in Sources */,
 				F4937E21290977C700E97AB9 /* MoviesCollectionDataSource.swift in Sources */,
 				F4C14F602908A1EC00DD912E /* HomeViewModel.swift in Sources */,
+				F4937E3D290A267D00E97AB9 /* HomeCoordinator.swift in Sources */,
+				F4937E38290A12CE00E97AB9 /* DetailView.swift in Sources */,
 				F4C14F192908765C00DD912E /* AppDelegate.swift in Sources */,
 				F4937E29290981AF00E97AB9 /* MoviesTableDataSource.swift in Sources */,
 				F4C14F4D29088B6000DD912E /* NetworkService.swift in Sources */,
-				F4C14F672908C16600DD912E /* DIContainer.swift in Sources */,
+				F4C14F672908C16600DD912E /* HomeFactory.swift in Sources */,
 				F4937E2B290988B900E97AB9 /* MoviesTableCell.swift in Sources */,
 				F4C14F652908B17000DD912E /* DiscoverMoviesUseCase.swift in Sources */,
 				F4C14F5C2908A1D200DD912E /* HomeController.swift in Sources */,
+				F4937E3A290A12D800E97AB9 /* DetailController.swift in Sources */,
 				F4937E272909813C00E97AB9 /* MoviesTableDelegate.swift in Sources */,
 				F4937E2F2909DC5E00E97AB9 /* ImageDownloader.swift in Sources */,
 				F4C14F5529088EFC00DD912E /* ErrorResponse.swift in Sources */,

@@ -20,11 +20,14 @@
 		F4937E3D290A267D00E97AB9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E3C290A267D00E97AB9 /* HomeCoordinator.swift */; };
 		F4937E3F290A37AF00E97AB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4937E3E290A37AF00E97AB9 /* Localizable.strings */; };
 		F4937E41290A397500E97AB9 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E40290A397500E97AB9 /* String+Localized.swift */; };
+		F4937E44290A3F1500E97AB9 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E43290A3F1500E97AB9 /* HomeViewModelTests.swift */; };
+		F4937E47290A3FDB00E97AB9 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E46290A3FDB00E97AB9 /* HomeDisplayLogicSpy.swift */; };
+		F4937E49290A416500E97AB9 /* DiscoverMoviesUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E48290A416500E97AB9 /* DiscoverMoviesUseCaseSpy.swift */; };
+		F4937E4B290A428200E97AB9 /* MovieFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E4A290A428200E97AB9 /* MovieFactory.swift */; };
 		F4C14F192908765C00DD912E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F182908765C00DD912E /* AppDelegate.swift */; };
 		F4C14F1B2908765C00DD912E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F1A2908765C00DD912E /* SceneDelegate.swift */; };
 		F4C14F222908765E00DD912E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C14F212908765E00DD912E /* Assets.xcassets */; };
 		F4C14F252908765E00DD912E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C14F232908765E00DD912E /* LaunchScreen.storyboard */; };
-		F4C14F302908765E00DD912E /* PipocaFlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F2F2908765E00DD912E /* PipocaFlixTests.swift */; };
 		F4C14F4B29088B0800DD912E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F4A29088B0800DD912E /* Endpoint.swift */; };
 		F4C14F4D29088B6000DD912E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F4C29088B6000DD912E /* NetworkService.swift */; };
 		F4C14F5229088D9600DD912E /* HomeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F5129088D9600DD912E /* HomeEndpoint.swift */; };
@@ -40,13 +43,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		F4C14F2C2908765E00DD912E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4C14F0D2908765C00DD912E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4C14F142908765C00DD912E;
-			remoteInfo = PipocaFlix;
-		};
-		F4C14F362908765E00DD912E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4C14F0D2908765C00DD912E /* Project object */;
 			proxyType = 1;
@@ -69,6 +65,10 @@
 		F4937E3C290A267D00E97AB9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		F4937E3E290A37AF00E97AB9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		F4937E40290A397500E97AB9 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		F4937E43290A3F1500E97AB9 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		F4937E46290A3FDB00E97AB9 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
+		F4937E48290A416500E97AB9 /* DiscoverMoviesUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoviesUseCaseSpy.swift; sourceTree = "<group>"; };
+		F4937E4A290A428200E97AB9 /* MovieFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFactory.swift; sourceTree = "<group>"; };
 		F4C14F152908765C00DD912E /* PipocaFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipocaFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C14F182908765C00DD912E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C14F1A2908765C00DD912E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,8 +76,6 @@
 		F4C14F242908765E00DD912E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4C14F262908765E00DD912E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4C14F2B2908765E00DD912E /* PipocaFlixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipocaFlixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4C14F2F2908765E00DD912E /* PipocaFlixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipocaFlixTests.swift; sourceTree = "<group>"; };
-		F4C14F352908765E00DD912E /* PipocaFlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipocaFlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C14F4A29088B0800DD912E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F4C14F4C29088B6000DD912E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F4C14F5129088D9600DD912E /* HomeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoint.swift; sourceTree = "<group>"; };
@@ -100,13 +98,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F4C14F282908765E00DD912E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4C14F322908765E00DD912E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,6 +153,25 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		F4937E42290A3EFF00E97AB9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F4937E45290A3FD100E97AB9 /* Utils */,
+				F4937E43290A3F1500E97AB9 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F4937E45290A3FD100E97AB9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F4937E46290A3FDB00E97AB9 /* HomeDisplayLogicSpy.swift */,
+				F4937E48290A416500E97AB9 /* DiscoverMoviesUseCaseSpy.swift */,
+				F4937E4A290A428200E97AB9 /* MovieFactory.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F4C14F0C2908765C00DD912E = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +186,6 @@
 			children = (
 				F4C14F152908765C00DD912E /* PipocaFlix.app */,
 				F4C14F2B2908765E00DD912E /* PipocaFlixTests.xctest */,
-				F4C14F352908765E00DD912E /* PipocaFlixUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,7 +205,7 @@
 		F4C14F2E2908765E00DD912E /* PipocaFlixTests */ = {
 			isa = PBXGroup;
 			children = (
-				F4C14F2F2908765E00DD912E /* PipocaFlixTests.swift */,
+				F4937E42290A3EFF00E97AB9 /* Home */,
 			);
 			path = PipocaFlixTests;
 			sourceTree = "<group>";
@@ -329,24 +338,6 @@
 			productReference = F4C14F2B2908765E00DD912E /* PipocaFlixTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F4C14F342908765E00DD912E /* PipocaFlixUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F4C14F452908765E00DD912E /* Build configuration list for PBXNativeTarget "PipocaFlixUITests" */;
-			buildPhases = (
-				F4C14F312908765E00DD912E /* Sources */,
-				F4C14F322908765E00DD912E /* Frameworks */,
-				F4C14F332908765E00DD912E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F4C14F372908765E00DD912E /* PBXTargetDependency */,
-			);
-			name = PipocaFlixUITests;
-			productName = PipocaFlixUITests;
-			productReference = F4C14F352908765E00DD912E /* PipocaFlixUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -361,10 +352,6 @@
 						CreatedOnToolsVersion = 14.0;
 					};
 					F4C14F2A2908765E00DD912E = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = F4C14F142908765C00DD912E;
-					};
-					F4C14F342908765E00DD912E = {
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = F4C14F142908765C00DD912E;
 					};
@@ -385,7 +372,6 @@
 			targets = (
 				F4C14F142908765C00DD912E /* PipocaFlix */,
 				F4C14F2A2908765E00DD912E /* PipocaFlixTests */,
-				F4C14F342908765E00DD912E /* PipocaFlixUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -402,13 +388,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F4C14F292908765E00DD912E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4C14F332908765E00DD912E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -454,14 +433,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4C14F302908765E00DD912E /* PipocaFlixTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4C14F312908765E00DD912E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				F4937E44290A3F1500E97AB9 /* HomeViewModelTests.swift in Sources */,
+				F4937E4B290A428200E97AB9 /* MovieFactory.swift in Sources */,
+				F4937E47290A3FDB00E97AB9 /* HomeDisplayLogicSpy.swift in Sources */,
+				F4937E49290A416500E97AB9 /* DiscoverMoviesUseCaseSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,11 +447,6 @@
 			isa = PBXTargetDependency;
 			target = F4C14F142908765C00DD912E /* PipocaFlix */;
 			targetProxy = F4C14F2C2908765E00DD912E /* PBXContainerItemProxy */;
-		};
-		F4C14F372908765E00DD912E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F4C14F142908765C00DD912E /* PipocaFlix */;
-			targetProxy = F4C14F362908765E00DD912E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -702,40 +672,6 @@
 			};
 			name = Release;
 		};
-		F4C14F462908765E00DD912E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ranieriaguiar.PipocaFlixUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PipocaFlix;
-			};
-			name = Debug;
-		};
-		F4C14F472908765E00DD912E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ranieriaguiar.PipocaFlixUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PipocaFlix;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -762,15 +698,6 @@
 			buildConfigurations = (
 				F4C14F432908765E00DD912E /* Debug */,
 				F4C14F442908765E00DD912E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4C14F452908765E00DD912E /* Build configuration list for PBXNativeTarget "PipocaFlixUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4C14F462908765E00DD912E /* Debug */,
-				F4C14F472908765E00DD912E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

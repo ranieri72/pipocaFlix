@@ -19,14 +19,14 @@ final class HomeViewModelImpl {
     private let discoverMoviesUseCase: DiscoverMoviesUseCase
     weak var controller: HomeDisplayLogic?
     
-    private var moviesSections = [Int: [Movie]]()
+    var moviesSections = [Int: [Movie]]()
     
     // MARK: - Initializers
     init(discoverMoviesUseCase: DiscoverMoviesUseCase) {
         self.discoverMoviesUseCase = discoverMoviesUseCase
     }
     
-    private func fetchMovies(from page: Int) {
+    func fetchMovies(from page: Int) {
         discoverMoviesUseCase.getDiscoveredMovies(page: String(page)) { [weak self] result in
             guard let self = self else { return }
             switch result {

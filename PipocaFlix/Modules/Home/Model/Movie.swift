@@ -10,7 +10,7 @@ struct MoviesResponse: Decodable {
     let results: [Movie]
 }
 
-struct Movie: Decodable {
+struct Movie: Decodable, Equatable {
     
     let posterPath: String
     let voteAverage: Float

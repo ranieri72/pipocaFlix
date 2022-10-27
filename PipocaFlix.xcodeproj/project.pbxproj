@@ -13,6 +13,8 @@
 		F4937E29290981AF00E97AB9 /* MoviesTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E28290981AF00E97AB9 /* MoviesTableDataSource.swift */; };
 		F4937E2B290988B900E97AB9 /* MoviesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E2A290988B900E97AB9 /* MoviesTableCell.swift */; };
 		F4937E2D290988E400E97AB9 /* MoviesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E2C290988E400E97AB9 /* MoviesCollectionCell.swift */; };
+		F4937E2F2909DC5E00E97AB9 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E2E2909DC5E00E97AB9 /* ImageDownloader.swift */; };
+		F4937E332909EA1000E97AB9 /* UIImageView+Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4937E322909EA1000E97AB9 /* UIImageView+Downloader.swift */; };
 		F4C14F192908765C00DD912E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F182908765C00DD912E /* AppDelegate.swift */; };
 		F4C14F1B2908765C00DD912E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C14F1A2908765C00DD912E /* SceneDelegate.swift */; };
 		F4C14F222908765E00DD912E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C14F212908765E00DD912E /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		F4937E28290981AF00E97AB9 /* MoviesTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableDataSource.swift; sourceTree = "<group>"; };
 		F4937E2A290988B900E97AB9 /* MoviesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableCell.swift; sourceTree = "<group>"; };
 		F4937E2C290988E400E97AB9 /* MoviesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionCell.swift; sourceTree = "<group>"; };
+		F4937E2E2909DC5E00E97AB9 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		F4937E322909EA1000E97AB9 /* UIImageView+Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Downloader.swift"; sourceTree = "<group>"; };
 		F4C14F152908765C00DD912E /* PipocaFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipocaFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C14F182908765C00DD912E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C14F1A2908765C00DD912E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +126,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F4937E302909E96700E97AB9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4937E312909E9B200E97AB9 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F4937E312909E9B200E97AB9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F4937E322909EA1000E97AB9 /* UIImageView+Downloader.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F4C14F0C2908765C00DD912E = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +184,7 @@
 		F4C14F4829088A2B00DD912E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F4937E302909E96700E97AB9 /* Common */,
 				F4C14F4E29088BC100DD912E /* Home */,
 				F4C14F4929088AA600DD912E /* Networking */,
 			);
@@ -176,6 +197,7 @@
 				F4C14F4A29088B0800DD912E /* Endpoint.swift */,
 				F4C14F4C29088B6000DD912E /* NetworkService.swift */,
 				F4C14F5429088EFC00DD912E /* ErrorResponse.swift */,
+				F4937E2E2909DC5E00E97AB9 /* ImageDownloader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -389,9 +411,11 @@
 				F4C14F652908B17000DD912E /* DiscoverMoviesUseCase.swift in Sources */,
 				F4C14F5C2908A1D200DD912E /* HomeController.swift in Sources */,
 				F4937E272909813C00E97AB9 /* MoviesTableDelegate.swift in Sources */,
+				F4937E2F2909DC5E00E97AB9 /* ImageDownloader.swift in Sources */,
 				F4C14F5529088EFC00DD912E /* ErrorResponse.swift in Sources */,
 				F4937E2D290988E400E97AB9 /* MoviesCollectionCell.swift in Sources */,
 				F4C14F622908A89500DD912E /* HomeService.swift in Sources */,
+				F4937E332909EA1000E97AB9 /* UIImageView+Downloader.swift in Sources */,
 				F4937E23290977FA00E97AB9 /* MoviesCollectionDelegate.swift in Sources */,
 				F4C14F5229088D9600DD912E /* HomeEndpoint.swift in Sources */,
 				F4C14F1B2908765C00DD912E /* SceneDelegate.swift in Sources */,
@@ -561,6 +585,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X7P389A7Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PipocaFlix/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -589,6 +614,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X7P389A7Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PipocaFlix/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";

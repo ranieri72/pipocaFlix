@@ -22,7 +22,6 @@ final class MoviesTableCell: UITableViewCell {
         let collectionView = UICollectionView(frame: contentView.frame, collectionViewLayout: layout)
         collectionView.register(MoviesCollectionCell.self, forCellWithReuseIdentifier: MoviesCollectionCell.cellIdentifier)
         collectionView.dataSource = moviesCollectionDataSource
-        collectionView.backgroundColor = .lightGray
         return collectionView
     }()
     
